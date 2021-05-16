@@ -426,7 +426,6 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 3em 1em 1em 1em;
-    /* min-height: 300px; */
   }
 
   .logo--footer {
