@@ -13,10 +13,10 @@
   --clr-dark-background: rgb(7, 7, 7);
   --clr-gray-background: rgb(90, 90, 90);
   --clr-light: #fdfdfd;
-  --clr-form-contact:rgba(255, 255, 255, .6);
+  --clr-form-contact: rgba(255, 255, 255, 0.6);
   --clr-dark: #0d0d0d;
   --clr-red: #fb1b29;
-  --gradient-dark:linear-gradient(315deg, #000000 0%, #101010 74%);
+  --gradient-dark: linear-gradient(315deg, #000000 0%, #101010 74%);
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
@@ -27,6 +27,8 @@
     0.125em 0.125em 0.5em rgba(255, 255, 255, 0.2);
   --bs-dark: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.5),
     0.125em 0.125em 0.5em rgba(0, 0, 0, 0.25);
+  --bs-dark-hover: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.85),
+    0.125em 0.125em 0.5em rgba(0, 0, 0, 1);
 }
 
 @media (min-width: 800px) {
@@ -47,7 +49,6 @@ html {
 
 body {
   margin: 0;
-  /* background-color: var(--clr-gray-background); */
   background: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0.15) 0%,
@@ -66,30 +67,22 @@ body {
   font-size: var(--fs-body);
   line-height: 1.6;
 }
-input[type='text'],
-input[type='email'] ,
-input[type='button'],
-textarea{
+
+input[type="text"],
+input[type="email"],
+input[type="button"],
+textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
   font-family: inherit;
   font-size: 130%;
   width: 100%;
 }
-textarea{
+
+textarea {
   resize: none;
 }
-.label-hidden {
-  border-width: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px) !important;
-  height: 1px !important;
-  overflow: hidden !important;
-  padding: 0 !important;
-  position: absolute !important;
-  white-space: nowrap !important;
-  width: 1px !important;
-  display: none;
-}
+
 section {
   padding: 5em 3em;
   z-index: 10;
@@ -128,6 +121,17 @@ a {
 }
 .btn:hover {
   transform: scale(1.1);
+}
+.label-hidden {
+  border-width: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+  display: none;
 }
 
 /*Letters*/
@@ -193,31 +197,29 @@ header {
 .nav__link:hover {
   opacity: 0.8;
 }
-.nav__link--current{
-  color:var(--clr-red);
-}
-
-/*logo intro*/
-.intro {
-  background-color: var(--clr-dark-background);
-background-image: var(--gradient-dark);
-  height: 100vh;
-}
-.section__logo--intro {
-  
-  max-width: 500px;
-  margin: 0 auto;
-}
-/*filters*/
-.icon__filter--wrapper:hover{
-  background-color:var(--clr-red);
-  transform: scale(1.1,1.1) skewX(-30deg);
-}
-.icon__container:hover{
-  
+.nav__link--current {
   color: var(--clr-red);
 }
 
+/*logo intro*/
+
+.intro {
+  background-color: var(--clr-dark-background);
+  background-image: var(--gradient-dark);
+  height: 100vh;
+}
+.section__logo--intro {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/*filters*/
+.icon__filter--wrapper:hover {
+  background-color: var(--clr-red);
+}
+.icon__container:hover {
+  color: var(--clr-red);
+}
 
 /*list vehicles*/
 
@@ -228,18 +230,25 @@ background-image: var(--gradient-dark);
   margin: 2em 0;
 }
 
-/*vehicle cards*/
+/*vehicle card*/
 
 .car__individual--container {
   background-color: var(--clr-light);
   box-shadow: var(--bs-dark);
   color: var(--clr-dark);
   margin: 0 auto;
-  /* max-width: 400px; */
+  width: 100%;
+  transition: box-shadow 0.2s linear;
 }
-.car__img{
+.car__img--container {
+  overflow: hidden;
+  background-color: var(--clr-dark);
+}
+.car__img {
   min-height: 303px;
   object-fit: cover;
+  width: 100%;
+  transition: transform 1s linear, opacity 1s linear, object-position 1s linear;
 }
 .car__individual--wrapper {
   display: flex;
@@ -273,15 +282,21 @@ background-image: var(--gradient-dark);
   border-radius: 50%;
   color: var(--clr-light);
 }
-.icon__card--arrow {
-  color: var(--clr-gray-background);
+.car__individual--container:hover {
+  box-shadow: var(--bs-dark-hover);
 }
 
-.car__individual--arrow {
-  margin-right: 1em;
+.car__img--container:hover {
+  background-color: var(--clr-red);
+}
+.car__img:hover {
+  object-position: right top;
+  opacity: 0.9;
+  transform: scale(1.1);
 }
 
 /*Popup whatsapp*/
+
 .popup__container--what {
   position: fixed;
   box-shadow: var(--bs-light);
@@ -308,7 +323,7 @@ background-image: var(--gradient-dark);
   .nav {
     position: relative;
     transform: translateX(0);
-    background-image:var(--gradient-dark);
+    background-image: var(--gradient-dark);
     transform: skewX(-30deg);
     padding: 1em;
   }
@@ -367,9 +382,7 @@ background-image: var(--gradient-dark);
     background-color: var(--clr-light);
     text-align: center;
     width: 100%;
-    transition: transform 0.5s cubic-bezier(1, 0.43, 0.66, 1.29), background-color 0.5s linear;
-    
-    ;
+    transition: background-color 0.5s linear;
   }
   .icon__container {
     width: 15%;
@@ -409,10 +422,7 @@ background-image: var(--gradient-dark);
 
   /*footer*/
   footer {
- 
-/* background-image: linear-gradient(135deg, #1a1a1a 0%, #070707 100%); */
-
-     background-color: var(--clr-dark-background); 
+    background-color: var(--clr-dark-background);
     display: flex;
     justify-content: space-between;
     padding: 3em 3em 1em 3em;
@@ -472,8 +482,7 @@ background-image: var(--gradient-dark);
   .nav__link--footer {
     transform: skewX(0deg);
   }
-  .social__media--footer{
-    
+  .social__media--footer {
     list-style: none;
     display: flex;
     height: 100%;
@@ -486,7 +495,7 @@ background-image: var(--gradient-dark);
   .social__media--item {
     font-size: 2.5rem;
   }
-  .icon__footer--red{
-    color:var(--clr-red);
+  .icon__footer--red {
+    color: var(--clr-red);
   }
 }

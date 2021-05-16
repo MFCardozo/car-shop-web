@@ -1,75 +1,70 @@
+.nav--contact {
+  background-image: none;
+  background-color: var(--clr-gray-background);
+}
+.section__title--form {
+  text-align: center;
+  margin: 1em 0;
+  color: var(--clr-form-contact);
+}
 
-.nav--contact{
-    background-image: none;
-    background-color: var(--clr-gray-background);
+.form__contact--container {
+  margin-top: 3em;
 }
-.section__title--form{
-    text-align: center;
-    margin:1em 0;
-    color: var(--clr-form-contact);
-}
-
-.form__contact--container{ 
-    margin-top:3em 
-    
-}
-.form__contact{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    margin:0 auto;
-    /* height: 25em; */
-    
+.form__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
 }
 .form__inputs,
-.form__msg{
-   display: flex;
-   width: 100%;
+.form__msg {
+  display: flex;
+  width: 100%;
 }
-.form__inputs{
-    justify-content: space-between;
+.form__inputs {
+  justify-content: space-between;
 }
 
-.field__contact{
-    width:45%;
-    height: 3em;
+.field__contact {
+  width: 45%;
+  height: 3em;
 }
-.field__contact--msg{
-    margin-top: 2em;
-    justify-content: center;
-    width: 100%;
-    height: 3.5em;
+.field__contact--msg {
+  margin-top: 2em;
+  justify-content: center;
+  width: 100%;
+  height: 3.5em;
 }
 .field__contact input,
-.field__contact textarea{
-    border  : none;
-    color:var(--clr-light);
-    margin  : 0;
-    width   : 100%;
-    height: 100%;
-    background : none;
-    border-bottom:2px solid var(--clr-form-contact);
+.field__contact textarea {
+  border: none;
+  color: var(--clr-light);
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-bottom: 2px solid var(--clr-form-contact);
 }
-.form___button--container{
-    margin-top: 2em;
+.form___button--container {
+  margin-top: 2em;
 }
-.btn--contact{
-    background-color: transparent;
-    border:2px solid var(--clr-form-contact);
-    color:var(--clr-form-contact);
+.btn--contact {
+  background-color: transparent;
+  border: 2px solid var(--clr-form-contact);
+  color: var(--clr-form-contact);
 }
 .btn--contact:hover,
 .field__contact input:hover,
 .field__contact textarea:hover,
-.field__contact--msg:hover,.btn--contact:focus,
+.field__contact--msg:hover,
+.btn--contact:focus,
 .field__contact input:focus,
 .field__contact textarea:focus,
-.field__contact--msg:focus{
-    border-color: rgba(255, 255, 255, 1);
-    outline: 0;
-    outline-offset: 0;
+.field__contact--msg:focus {
+  border-color: rgba(255, 255, 255, 1);
+  outline: 0;
+  outline-offset: 0;
 }
-
-
