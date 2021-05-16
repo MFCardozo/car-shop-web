@@ -302,7 +302,7 @@ header {
   box-shadow: var(--bs-light);
   border-radius: 100%;
   background-color: #25d366;
-  right: 3%;
+  right: 2vw;
   bottom: 10%;
   z-index: 100;
   transition: background-color 1s linear;
@@ -425,8 +425,8 @@ header {
     background-color: var(--clr-dark-background);
     display: flex;
     justify-content: space-between;
-    padding: 3em 3em 1em 3em;
-    min-height: 300px;
+    padding: 3em 1em 1em 1em;
+    /* min-height: 300px; */
   }
 
   .logo--footer {
@@ -438,7 +438,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     height: 250px;
-    flex-grow: 1;
+    width: 28vw;
   }
   .list__contact {
     list-style: none;
@@ -460,17 +460,15 @@ header {
     border-left: 3px var(--clr-red) solid;
     margin: -3em 0 -1em 0;
     position: relative;
-    right: 2.7em;
-    flex-grow: 2;
+    left: 3%;
   }
 
   .right__footer--container {
     margin-top: 0em;
-    transform: skewX(30deg);
     display: flex;
     justify-content: space-evenly;
-    padding-top: 8em;
-    width: 90%;
+    padding-top: 5em;
+    width: 60vw;
   }
 
   .list--footer {
