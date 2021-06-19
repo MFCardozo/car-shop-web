@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/category.css" />
 
     <!-- FONTS -->
 
@@ -33,50 +33,68 @@
             <a href="index.html" class="nav__link">Inicio</a>
           </li>
           <li class="nav__item">
-            <a href="index.html#list_summary" class="nav__link">Lista de vehiculos</a>
+            <a href="index.html#list_summary" class="nav__link"
+              >Lista de vehiculos</a
+            >
           </li>
           <li class="nav__item">
             <a href="promo.html" class="nav__link">Promociones</a>
           </li>
 
           <li class="nav__item">
-            <a href="contacto.html" class="nav__link nav__link--current"
-              >Contacto</a
-            >
+            <a href="contacto.html" class="nav__link">Contacto</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <section class="contact" id="contact">
+    <section class="category" id="suv">
       <div class="line__title--container">
         <div class="line__title--wrapper">
-          <h3 class="section__title section__title--list">Contacto</h3>
+          <h3 class="section__title section__title--list">SUV</h3>
         </div>
       </div>
-      <h1 class="section__title section__title--form">
-        Pongase en contacto con nosotros
-      </h1>
-      <div class="form__contact--container">
-        <form action="" class="form__contact">
-          <div class="form__inputs">
-            <div class="field__contact">
-              <label for="name" class="label-hidden">Nombre:</label>
-              <input type="text" placeholder="Tu Nombre" id="name" />
-            </div>
-            <div class="field__contact">
-              <label for="email" class="label-hidden">Email:</label>
-              <input type="email" placeholder="Tu Email" id="email" />
-            </div>
+      <div class="category__detail--container">
+        <div class="category__img--container">
+          <img class="category__img" src="assets/kia_telluride.jpg" alt="suv" />
+        </div>
+        <div class="category__text--container">
+          <div class="category__detail">
+            <h3>¿Porque elegir una SUV?</h3>
+            <p>
+              Seguramente has escuchado muchas veces el término SUV sin saber
+              que son las siglas de Sport Utility Vehicle.Los vehículos que pertenecen a esta categoría
+              combinan la practicidad de un turismo con la corpulencia de un
+              todoterreno, por lo cual pueden desenvolverse muy bien sobre las
+              vías de la ciudad así como en el campo.
+            </p>
           </div>
-          <div class="field__contact field__contact--msg">
-            <label for="msg" class="label-hidden">Mensaje:</label>
-            <textarea placeholder="Su Mensaje" id="msg"></textarea>
+          <div class="category__pros">
+            <h4>Caracteristicas:</h4>
+            <ul>
+              <li class="category__item--pros">
+                <i class="far fa-check-square icon__category"></i>Comodo manejo
+              </li>
+              <li class="category__item--pros">
+                <i class="far fa-check-square icon__category"></i>Tanto para el campo como la cuidad
+              </li>
+              <li class="category__item--pros">
+                <i class="far fa-check-square icon__category"></i>Amplio espacio
+              </li>
+              <li class="category__item--pros">
+                <i class="far fa-check-square icon__category"></i>4x4
+              </li>
+            </ul>
           </div>
-          <div class="form___button--container">
-            <input class="btn btn--contact" type="button" value="Enviar" />
-          </div>
-        </form>
+        </div>
+      </div>
+      <div class="category__btn--container">
+        <input
+          type="button"
+          onclick="location.href='contacto.html';"
+          class="btn btn--category"
+          value="Contactar"
+        />
       </div>
     </section>
 

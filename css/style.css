@@ -23,8 +23,8 @@
   --fs-h4: 1.175rem;
   --fs-body: 1.125rem;
   --is-arrow: 1.1em;
-  --bs-light: 0.25em 0.25em 0.75em rgba(255, 255, 255, 0.25),
-    0.125em 0.125em 0.5em rgba(255, 255, 255, 0.2);
+  --bs-light: 0.25em 0.25em 0.75em rgba(245, 245, 245, 0.25),
+    0.125em 0.125em 0.5em rgba(245, 245, 245, 0.2);
   --bs-dark: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.5),
     0.125em 0.125em 0.5em rgba(0, 0, 0, 0.25);
   --bs-dark-hover: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.85),
@@ -99,6 +99,9 @@ strong {
 a {
   color: inherit;
   text-decoration: none;
+}
+li {
+  list-style-type: none;
 }
 
 :focus {
@@ -248,7 +251,7 @@ header {
   min-height: 303px;
   object-fit: cover;
   width: 100%;
-  transition: transform 1s linear, opacity 1s linear, object-position 1s linear;
+  transition: transform 1s linear, opacity 1s linear;
 }
 .car__individual--wrapper {
   display: flex;
@@ -290,9 +293,8 @@ header {
   background-color: var(--clr-red);
 }
 .car__img:hover {
-  object-position: right top;
   opacity: 0.9;
-  transform: scale(1.1);
+  transform: scale(1.1) translateY(10px);
 }
 
 /*Popup whatsapp*/
@@ -326,6 +328,10 @@ header {
     background-image: var(--gradient-dark);
     transform: skewX(-30deg);
     padding: 1em;
+  }
+  .nav__alt {
+    background-image: none;
+    background-color: var(--clr-gray-background);
   }
   .nav__list {
     flex-direction: row;

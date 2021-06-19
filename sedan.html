@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/category.css" />
 
     <!-- FONTS -->
 
@@ -33,50 +33,70 @@
             <a href="index.html" class="nav__link">Inicio</a>
           </li>
           <li class="nav__item">
-            <a href="index.html#list_summary" class="nav__link">Lista de vehiculos</a>
+            <a href="index.html#list_summary" class="nav__link"
+              >Lista de vehiculos</a
+            >
           </li>
           <li class="nav__item">
             <a href="promo.html" class="nav__link">Promociones</a>
           </li>
 
           <li class="nav__item">
-            <a href="contacto.html" class="nav__link nav__link--current"
-              >Contacto</a
-            >
+            <a href="contacto.html" class="nav__link">Contacto</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <section class="contact" id="contact">
+    <section class="category" id="sedan">
       <div class="line__title--container">
         <div class="line__title--wrapper">
-          <h3 class="section__title section__title--list">Contacto</h3>
+          <h3 class="section__title section__title--list">Sedan</h3>
         </div>
       </div>
-      <h1 class="section__title section__title--form">
-        Pongase en contacto con nosotros
-      </h1>
-      <div class="form__contact--container">
-        <form action="" class="form__contact">
-          <div class="form__inputs">
-            <div class="field__contact">
-              <label for="name" class="label-hidden">Nombre:</label>
-              <input type="text" placeholder="Tu Nombre" id="name" />
-            </div>
-            <div class="field__contact">
-              <label for="email" class="label-hidden">Email:</label>
-              <input type="email" placeholder="Tu Email" id="email" />
-            </div>
+      <div class="category__detail--container">
+        <div class="category__img--container">
+          <img class="category__img" src="assets/mercedes.jpg" alt="sedan" />
+        </div>
+        <div class="category__text--container">
+          <div class="category__detail">
+            <h3>¿Porque elegir un sedan?</h3>
+            <p>
+              Tendrás garantizado estar al volante de un automóvil cincelado
+              para viajes largos dentro de la ciudad. Las ventajas del sedán
+              residen en particular en su comodidad a bordo, tanto en términos
+              de tapicería y asientos, como en términos de manejo gracias a las
+              tecnologías de asistentes de conducción y conectividad a bordo.
+            </p>
           </div>
-          <div class="field__contact field__contact--msg">
-            <label for="msg" class="label-hidden">Mensaje:</label>
-            <textarea placeholder="Su Mensaje" id="msg"></textarea>
+          <div class="category__pros">
+            <h4>Caracteristicas:</h4>
+            <ul>
+              <li class="category__item--pros">
+                <i class="far fa-check-square icon__category"></i>Ideal para la
+                familia
+              </li>
+              <li class="category__item--pros">
+                <i class="far fa-check-square icon__category"></i>Economico
+              </li>
+              <li class="category__item--pros">
+                <i class="far fa-check-square icon__category"></i>Comodo en la
+                cuidad
+              </li>
+              <li class="category__item--pros">
+                <i class="far fa-check-square icon__category"></i>Bajo consumo
+              </li>
+            </ul>
           </div>
-          <div class="form___button--container">
-            <input class="btn btn--contact" type="button" value="Enviar" />
-          </div>
-        </form>
+        </div>
+      </div>
+      <div class="category__btn--container">
+        <input
+          type="button"
+          onclick="location.href='contacto.html';"
+          class="btn btn--category"
+          value="Contactar"
+        />
       </div>
     </section>
 
